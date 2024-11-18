@@ -1,0 +1,38 @@
+@contentType = application/json
+
+GET http://localhost:8080/api/todos
+
+###
+
+POST http://localhost:8080/api/todos
+Content-Type: {{contentType}}
+
+{
+  "title": "Buy milk"
+}
+
+###
+
+POST http://localhost:8080/api/todos
+Content-Type: {{contentType}}
+
+{
+  "title": "Buy bread"
+}
+
+###
+
+GET http://localhost:8080/api/todos/1731904642804
+
+###
+
+PUT http://localhost:8080/api/todos/1731904642804
+Content-Type: {{contentType}}
+
+{
+  "title": "Buy milk x 2"
+}
+
+###
+
+DELETE http://localhost:8080/api/todos/1731904642804
